@@ -1,0 +1,51 @@
+div {
+  label {
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    width: 500px;
+
+    .serchInp {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border-clr);
+      border-radius: 5px;
+      outline: none;
+      background-color: transparent;
+
+      &:focus {
+        outline: 3px solid var(--outline-clr);
+        border: 2px solid var(--input-clr);
+
+        & + .icon {
+          display: none;
+        }
+      }
+    }
+
+    .icon {
+      display: block;
+      position: absolute;
+      color: var(--icon-clr);
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  div {
+    label {
+      width: 320px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  div {
+    label {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+// Banner
+.banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 80px !important;
+}
+
+// Banner Items
+.bannerItem {
+  background-color: yellow;
+  width: 49%;
+  height: 250px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  text-transform: capitalize;
+
+  h2 {
+    font-size: 21px;
+  }
+
+  p {
+    padding: 10px 0px;
+    font-size: 16px;
+  }
+
+  button {
+    width: fit-content;
+    background-color: var(--dark-clr);
+    color: var(--white-clr);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+    .banner {
+      flex-wrap: wrap;
+      padding-top: 50px !important;
+      gap: 10px;
+    }
+
+    .bannerItem {
+        width: 100%;
+    }
+  }

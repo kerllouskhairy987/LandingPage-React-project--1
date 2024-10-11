@@ -1,0 +1,107 @@
+// Footer Component
+.footer {
+  // Footer Top
+  background-color: var(--footer-clr);
+  margin-top: 80px;
+
+  .footer-top {
+    ul {
+      list-style: none;
+    }
+
+    h5 {
+      padding: 10px 0px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 5px 0px;
+      transition: all 0.3s linear;
+      &:hover {
+        color: var(--input-clr);
+      }
+    }
+
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+    column-gap: 100px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+
+    .footer-top-first {
+      white-space: nowrap;
+      // flex-grow: 1;
+
+      .lists {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-top-components {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      flex-grow: 2;
+      justify-content: space-between;
+    }
+  }
+
+  // Footer Middle
+  .footer-midle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+
+    div {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      p {
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Footer Bottom
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      a {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--border-clr);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          color: var(--input-clr);
+        }
+      }
+    }
+  }
+}

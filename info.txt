@@ -1,0 +1,96 @@
+// -- Home Slider
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Auto Play
+import { Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+
+export default () => {
+  return (
+    <div className="container">
+        <Swiper
+        modules={[Autoplay]}
+        autoplay
+        >
+        <SwiperSlide style={{backgroundColor: "red" , width: "200px"}}>Slide 1</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: "green" , width: "500px"}}>Slide 2</SwiperSlide>
+        </Swiper>
+    </div>
+  );
+};
+
+
+/////////////-------------
+
+// -- Products Slider
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Auto Play
+import { Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+
+export default () => {
+  return (
+    <div className="container">
+        <Swiper
+        // install Swiper modules
+        modules={[Autoplay]}
+        spaceBetween={50}
+        slidesPerView={2}
+        breakpoints={{
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+            },
+        }}
+    
+        autoplay
+        >
+        <SwiperSlide style={{backgroundColor: "red"}}>Slide 1</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: "green"}}>Slide 2</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: "blue"}}>Slide 3</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: "yellow"}}>Slide 4</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: "black"}}>Slide 4</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: "orange"}}>Slide 4</SwiperSlide>
+        </Swiper>
+    </div>
+  );
+};
+
+
+
+
+
+-- All components
+[00] AllData
+[01] Header
+[02] Input
+[03] Menu
+// --
+[04] MainSection        {Parent slider}
+[05] MainSectionSlide   {Child Sliders}
+[06] FeatureSlide       {Products Slider}
+[07] PopularProducts
+[08] ProductOptions
+[09] BestSells
+[10] ExtraInfo
+[11] Banner
+[12] Footer ==> {FooterTop / FooterMiddle / FooterBottom}
+
+-- styles
+[1] _Imports.scss
+[2] App.scss

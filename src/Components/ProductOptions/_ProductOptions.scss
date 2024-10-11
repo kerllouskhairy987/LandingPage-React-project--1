@@ -1,0 +1,82 @@
+.product-options-component {
+  display: flex;
+  gap: 10px;
+  position: relative;
+
+  .icon {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px var(--dark-clr);
+    background-color: var(--white-clr);
+    font-size: 30px;
+    font-weight: 800;
+    display: block;
+
+    &:hover {
+      background-color: var(--input-clr);
+      color: var(--white-clr);
+    }
+  }
+
+  div {
+    position: relative;
+
+    &::after {
+      align-items: center;
+      display: none;
+      position: absolute;
+      content: "";
+      top: -44px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--dark-clr);
+      border-radius: 5px;
+      height: 20px;
+      padding: 5px 10px;
+      color: var(--white-clr);
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-style: solid;
+      border-width: 10px;
+      border-color: var(--dark-clr) transparent transparent transparent;
+      white-space: nowrap;
+    }
+
+    &.eye::after {
+      content: "Quick View";
+    }
+
+    &.heart::after {
+      content: "Wishlist";
+    }
+
+    &.mobile-data::after {
+      content: "Compare";
+    }
+
+    &.eye:hover::after,
+    &.eye:hover::before {
+      display: flex;
+    }
+
+    &.heart:hover::after,
+    &.heart:hover::before {
+      display: flex;
+    }
+
+    &.mobile-data:hover::after,
+    &.mobile-data:hover::before {
+      display: flex;
+    }
+  }
+}

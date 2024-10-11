@@ -1,0 +1,89 @@
+.container.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    div.location {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid var(--border-clr);
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: var(--dark-clr);
+        color: var(--white-clr);
+      }
+
+      .icon {
+        margin-right: 5px;
+      }
+    }
+  }
+  // -- || Icon Part With ClassName="icon-part"
+  .icon-part {
+    .icon {
+      color: var(--icon-clr);
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    div {
+      position: relative;
+      span {
+        position: absolute;
+        top: -12px;
+        right: -10px;
+        font-size: 11px;
+        background-color: var(--main-clr);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white-clr);
+        cursor: pointer;
+      }
+    }
+  }
+  // -- || Menu Part With ClassName="menu-part"
+  .menu-part {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid var(--border-clr);
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 780px) {
+  .container.header {
+    & > div {
+      div.location {
+        display: none;
+      }
+    }
+
+    .menu-part {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .container.header {
+    .icon-part {
+      .icon {
+        font-size: 16px;
+      }
+    }
+  }
+}

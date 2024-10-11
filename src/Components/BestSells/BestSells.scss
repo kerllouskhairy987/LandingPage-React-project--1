@@ -1,0 +1,146 @@
+// Best Sell
+.best-sell {
+  overflow: hidden;
+
+  h2 {
+    margin: 30px 0px 10px 0px;
+  }
+
+  .items {
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+// Best Sell Item
+.best-sell-item {
+  .item {
+    width: 340px;
+    border: 1px solid var(--border-clr);
+    border-radius: 5px;
+    padding: 10px 10px 20px 10px;
+
+    &:hover {
+      border-color: var(--input-clr);
+      box-shadow: 0px 3px 3px var(--input-clr);
+    }
+
+    .item-img {
+      position: relative;
+      .product-options {
+        transition: all 0.4s linear;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: scale(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &:hover .item-img .product-options {
+      transform: translateX(-50%) scale(1);
+    }
+
+    .discount {
+      background-color: var(--input-clr);
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      padding-bottom: 10px;
+    }
+
+    a {
+      display: inline-block;
+      font-weight: 700;
+      padding: 15px 0px 10px 0px;
+
+      &:hover {
+        color: var(--input-clr);
+      }
+    }
+
+    .best-price {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      del {
+        margin-left: 5px;
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--dark-clr);
+      }
+    }
+
+    button {
+      background-color: var(--input-clr);
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      color: var(--white-clr);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      text-transform: capitalize;
+      cursor: pointer;
+      width: 100%;
+      font-size: 17px;
+      &:active {
+        transform: scale(0.9);
+      }
+      &:hover {
+        background-color: green;
+      }
+    }
+  }
+}
+
+// Cover Product In Best Sell Cover Component
+.cover-product {
+  height: 100%;
+  background-image: url("https://freshcart-tailwind.codescandy.com/assets/images/banner/banner-deal.jpg");
+  background-position: center;
+  width: 350px;
+  padding: 30px;
+  color: var(--white-clr);
+  text-transform: capitalize;
+  border-radius: 5px;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  p {
+    padding: 10px 0px;
+    font-size: 15px;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    font-weight: 700;
+    padding: 10px;
+    background-color: var(--input-clr);
+    border-radius: 5px;
+    color: var(--white-clr);
+    text-transform: capitalize;
+    cursor: pointer;
+    &:hover {
+      background-color: green;
+    }
+  }
+}
