@@ -1,5 +1,4 @@
 import Input from "../Inputs/Input";
-import Menu from "../Menu/Menu";
 import { CiLocationOn } from "react-icons/ci";       // Location Icon
 import { FaRegHeart } from "react-icons/fa";         // Heart Icon
 import { FaRegUser } from "react-icons/fa";          // User Icon
