@@ -22,7 +22,6 @@ function App() {
       <BestSells />
       <ExtraInfo />
       <Footer />
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem dolorem quisquam accusamus molestiae at ipsum recusandae perspiciatis vel veniam, unde ex expedita, cumque, deleniti tempore? Earum, consequatur. Hic, facilis illum.</p>
     </>
   )
 }
